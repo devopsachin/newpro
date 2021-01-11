@@ -21,6 +21,9 @@ node {
   stage ('echoing all varribles'){
     sh """echo hi """
   }
+  stage ('Echo my mobile number'){
+    common.mobile()
+  }
 }
 
   
