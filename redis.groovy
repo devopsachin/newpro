@@ -25,7 +25,7 @@ node {
     common.mobile()
   }
   stage ('Creating VMs for redis'){
-   common.vm_creation(imageid,vmcount,vmtype,,keyname,securitygroupid,subnetid,vmname) 
+   common.vm_creation(imageid,vmcount,vmtype,,keyname,securitygroupid,subnetid) 
   }
   }
 
