@@ -19,5 +19,6 @@ def vm_creation (def imageid, def vmcount, def vmtype, def keyname, def security
  sh '''
     aws ec2 run-instances --image-id ${imageid} --block-device-mappings file:///tmp/maping.json --count ${vmcount} --instance-type ${vmtype} --key-name ${keyname} --security-group-ids ${securitygroupid} --subnet-id ${subnetid}
 '''
+}
    
 return this 
