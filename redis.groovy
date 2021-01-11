@@ -12,7 +12,7 @@ node {
   def keyname="jenkins"
   def securitygroupid="sg-8ed10bec"
   def subnetid="subnet-dc5068b4"
-  def rootdir="/home/ec2user"
+  def rootdir="/home/ec2-user"
   
   stage ('Loading common Files'){
     checkout scm
