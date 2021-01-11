@@ -27,5 +27,6 @@ node {
   stage ('Creating VMs for redis'){
    common.vm_creation(vmcount,vmsize,imageid,vmtype,securitygroupid,subnetid,vmname) 
   }
+  }
 
   
