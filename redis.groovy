@@ -18,5 +18,9 @@ node {
     checkout scm
     common=load "${rootdir}/newpro/common.groovy"
   }
+  stage ('echoing all varribles'){
+    sh """echo hi """
+  }
 }
+
   
