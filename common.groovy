@@ -7,3 +7,9 @@ import groovy.json.*
 import java.util.Map;
 import java.io.Reader;
 import java.util.HashMap;
+
+
+def number (){
+	sh """ 9972045653"""
+	
+}
