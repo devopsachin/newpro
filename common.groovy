@@ -9,7 +9,7 @@ import java.io.Reader;
 import java.util.HashMap;
 
 
-def number (){
+def mobile (){
 	sh """ 9972045653"""
 	
 }
