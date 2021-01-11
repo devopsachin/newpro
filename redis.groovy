@@ -16,7 +16,7 @@ node {
   
   stage ('Loading common Files'){
     checkout scm
-    common=load "${rootdir}/newpro/common.groovy"
+    common=load "${rootdir}/newpro/Common.groovy"
   }
   stage ('echoing all varribles'){
     sh """echo hi """
