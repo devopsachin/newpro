@@ -11,7 +11,7 @@ import java.util.HashMap;
 
 def mobile (){
  sh """
- 	echo "9972045653"
+ 	echo "9972"
     """
 }
 
