@@ -20,10 +20,14 @@ def vm_creation (def imageid,def vmcount,def vmtype,def keyname,def securitygrou
     sudo aws ec2 run-instances --image-id ${imageid} --block-device-mappings file:///tmp/maping.json --count ${vmcount} --instance-type ${vmtype} --key-name ${keyname} --security-group-ids ${securitygroupid} --subnet-id ${subnetid}
 """
 }
-def create_name (def instanceid,def vmname){
+def create_name (def vmname){
   sh """
-     sudo aws ec2 create-tags --resources $instanceid --tags Key=Name,Value= ${vmname}
- """
+     aws ec2 describe-instances --output json | grep "InstanceId" | awk '{print $2}' | tr '"' ' ' | tr ',' ' ' > name.txt
+     instanceid=`cat name.txt`
+     for a in $instanceid; do
+     sudo aws ec2 create-tags --resources $instanceid --tags Key=Name,Value=${vmname}
+     done
+    """
  }
  
 return this 
