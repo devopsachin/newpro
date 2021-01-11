@@ -9,7 +9,7 @@ node {
   def ostype="RHEL"
   def imageid="ami-0a9d27a9f4f5c0efc"
   def vmcount="6"
-  def keyname="jenkins"
+  def keyname="Jenkins"
   def securitygroupid="sg-8ed10bec"
   def subnetid="subnet-dc5068b4"
   def rootdir="/var/lib/jenkins"
