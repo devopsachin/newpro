@@ -13,6 +13,7 @@ node {
   def securitygroupid="sg-8ed10bec"
   def subnetid="subnet-dc5068b4"
   def rootdir="/var/lib/jenkins"
+  def instanceid
   
   stage ('Loading common Files'){
     checkout scm
@@ -28,7 +29,7 @@ node {
    //common.vm_creation(imageid,vmcount,vmtype,keyname,securitygroupid,subnetid) 
   //}
   stage ('adding name for created vms'){
-    common.create_name(vmname)
+    common.create_name(instanceid,vmname)
   }
   }
 
