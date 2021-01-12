@@ -23,7 +23,7 @@ def vm_creation (def imageid,def vmcount,def vmtype,def keyname,def securitygrou
 def create_name (def vmname){
   sh """
      sudo aws ec2 describe-instances --output json | grep "InstanceId" | awk '{print $2}' | tr '"' ' ' | tr ',' ' ' > name.txt
-     instanceid=`cat name.txt`
+     instanceid=$(cat name.txt)
      for a in $instanceid; do
      echo ${vmname}
      sudo aws ec2 create-tags --resources $instanceid --tags Key=Name,Value=${vmname}
