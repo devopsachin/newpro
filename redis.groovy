@@ -19,5 +19,5 @@ node {
     common=load "${rootdir}/newpro/common.groovy"
   }
 }
- return this ;
+ return this 
 
